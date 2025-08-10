@@ -1,0 +1,14 @@
+# Node
+node_modules/
+dist/
+.env
+.vscode/
+.DS_Store
+
+# Frontend build output
+frontend/dist/
+frontend/node_modules/
+
+# Backend build output
+backend/dist/
+backend/node_modules/
