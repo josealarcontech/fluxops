@@ -15,12 +15,19 @@ datasource db {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
+  id        String   @id @default(cuid())
   email     String   @unique
-  name      String?
-  role      String
+  name      String
+  role      Role     @default(TECHNICIAN)
   createdAt DateTime @default(now())
-  Job       Job[]
+  updatedAt DateTime @updatedAt
+}
+
+enum Role {
+  ADMIN
+  MANAGER
+  TEAM_LEAD
+  TECHNICIAN
 }
 
 model Client {
