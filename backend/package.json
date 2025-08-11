@@ -7,7 +7,7 @@
     "dev": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts",
     "start": "node dist/index.js",
     "build": "tsc",
-    "lint": "eslint src --ext .ts",
+    "lint": "eslint 'src/**/*.{ts,tsx,js,jsx}'",
     "seed": "ts-node prisma/seed.ts",
     "migrate:dev": "prisma migrate dev && npm run seed"
   },
